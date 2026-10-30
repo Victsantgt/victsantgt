@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Victsantgt | Página en construcción</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #8eae79;
+            color: #344b2d;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image: radial-gradient(
+                circle,
+                #b9d99d 8px,
+                transparent 8.5px
+            );
+            background-size: 65px 65px;
+            animation: puntosMovimiento 18s linear infinite;
+        }
+
+        @keyframes puntosMovimiento {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 65px 65px;
+            }
+        }
+
+        .card {
+            width: 100%;
+            max-width: 800px;
+            padding: 60px 30px;
+            text-align: center;
+            background-color: #fffefa;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(45, 70, 35, 0.15);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #527a46;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 35px;
+            background-color: #527a46;
+            margin-top: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background-color 0.25s ease,
+                        transform 0.25s ease;
+        }
+
+        .button:hover {
+            background-color: #3d6034;
+            transform: translateY(-3px);
+        }
+
+        .button:focus-visible {
+            outline: 3px solid #527a46;
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body::before {
+                animation: none;
+            }
+
+            .button {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+        <h1>Página en construcción</h1>
+        <p>Víctor o está trabajando en esto o en alguna otra movida (o quizá jugando a algún jueguito). ¡Espera un par de días y seguro que está terminado!</p>
+        <a href="index.html" class="button">Volver</a>
+    </main>
+
+</body>
+
+</html>
